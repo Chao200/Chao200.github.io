@@ -16,22 +16,28 @@
   <meta name="author" content="Chao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="nihao????你">
+    <meta name="description" content="通过 ssh 与 github 仓库建立远程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2022/11/17/hello-world/index.html">
+<meta property="og:title" content="Git_01">
+<meta property="og:url" content="http://example.com/2022/11/24/Git_01/index.html">
 <meta property="og:site_name" content="Chao">
-<meta property="og:description" content="nihao????你">
+<meta property="og:description" content="通过 ssh 与 github 仓库建立远程">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-11-17T02:43:37.328Z">
-<meta property="article:modified_time" content="2022-11-17T03:55:02.511Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120355.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120751.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120843.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120912.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124121148.png">
+<meta property="article:published_time" content="2022-11-24T03:57:40.333Z">
+<meta property="article:modified_time" content="2022-11-24T04:31:32.944Z">
 <meta property="article:author" content="Chao">
-<meta property="article:tag" content="en">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120355.png">
   
   
   
-  <title>Hello World - Chao</title>
+  <title>Git_01 - Chao</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -184,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="Git_01"></span>
           
         </div>
 
@@ -195,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-17 10:43" pubdate>
-          November 17, 2022 am
+        <time datetime="2022-11-24 11:57" pubdate>
+          November 24, 2022 am
         </time>
       </span>
     
@@ -207,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          10 words
+          667 words
         
       </span>
     
@@ -218,7 +224,7 @@
         
         
         
-          1 mins
+          6 mins
         
       </span>
     
@@ -256,12 +262,60 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">Git_01</h1>
             
             
               <div class="markdown-body">
                 
-                <p>nihao????你</p>
+                <h1 id="1、配置"><a href="#1、配置" class="headerlink" title="1、配置"></a>1、配置</h1><ul>
+<li><p>用户名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git config --global user.name &quot;chao&quot;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>邮箱</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git config --global user.email &quot;xiaochao200@126.com&quot;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>可以随便填，主要记录你的信息</p>
+</blockquote>
+<h1 id="2、与-github-建立远程-ssh"><a href="#2、与-github-建立远程-ssh" class="headerlink" title="2、与 github 建立远程 (ssh)"></a>2、与 github 建立远程 (ssh)</h1><h2 id="2-1-初始化"><a href="#2-1-初始化" class="headerlink" title="2.1 初始化"></a>2.1 初始化</h2><p>进入本地一个文件夹</p>
+<ul>
+<li><p>初始化</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git init<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>创建文件（非必要）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">touch README.md<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="2-2-ssh"><a href="#2-2-ssh" class="headerlink" title="2.2 ssh"></a>2.2 ssh</h2><ul>
+<li>生成本地 ssh</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120355.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd ~<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd .ssh<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cat id_rsa.pub<br></code></pre></td></tr></table></figure>
+
+<p>上面代码执行后输出的就是 ssh 秘钥，复制</p>
+<p>如果没有 <mark style="background: #FF5582A6;">id_rsa.pub</mark></p>
+<ul>
+<li>创建 ssh 秘钥<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ssh-keygen -t rsa -C &quot;xiaochao200@126.com&quot;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>生成后，执行上面步骤，最后复制</p>
+<h2 id="2-3-github"><a href="#2-3-github" class="headerlink" title="2.3 github"></a>2.3 github</h2><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120751.png" srcset="/img/loading.gif" lazyload alt="150"></p>
+<p>在 github 账户的 settings 中找到下面的 SSH and GPG keys</p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120843.png" srcset="/img/loading.gif" lazyload alt="200"></p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120912.png" srcset="/img/loading.gif" lazyload></p>
+<p>点击 new ssh key，然后将之前复制的本地 ssh 秘钥粘贴保存即可</p>
+<p>再创建一个仓库 resp</p>
+<h2 id="2-4-tokens"><a href="#2-4-tokens" class="headerlink" title="2.4 tokens"></a>2.4 tokens</h2><p>在 github 用户 settings 的 develpoer settings 中创建 tokens</p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124121148.png" srcset="/img/loading.gif" lazyload alt="300"></p>
+<h2 id="2-5-建立远程"><a href="#2-5-建立远程" class="headerlink" title="2.5 建立远程"></a>2.5 建立远程</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git remote add origin git@github.com:用户名/仓库名.git<br></code></pre></td></tr></table></figure>
+
+<p>其中的 origin 也可以换成别的名字</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git remote set-url origin https://你的tokens@github.com/用户名/仓库名.git<br></code></pre></td></tr></table></figure>
+
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">第一次 push</span><br>git push -u origin main<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">以后 push</span><br>git push origin main<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -270,11 +324,32 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/tools/" class="category-chain-item">tools</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/en/">#en</a>
+        <a href="/tags/git/">#git</a>
       
     </div>
   
@@ -287,8 +362,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2022/11/17/hello-world/</div>
+      <div>Git_01</div>
+      <div>http://example.com/2022/11/24/Git_01/</div>
     </div>
     <div class="license-meta">
       
@@ -300,7 +375,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>November 17, 2022</div>
+          <div>November 24, 2022</div>
         </div>
       
       
