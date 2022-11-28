@@ -32,8 +32,11 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127161915.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127161102.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127161454.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221128095155.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221128102730.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221128105625.png">
 <meta property="article:published_time" content="2022-11-25T09:57:10.148Z">
-<meta property="article:modified_time" content="2022-11-27T09:07:34.098Z">
+<meta property="article:modified_time" content="2022-11-28T03:10:51.354Z">
 <meta property="article:author" content="Chao">
 <meta property="article:tag" content="Numpy">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k words
+          2.6k words
         
       </span>
     
@@ -233,7 +236,7 @@
         
         
         
-          11 mins
+          22 mins
         
       </span>
     
@@ -276,7 +279,8 @@
             
               <div class="markdown-body">
                 
-                <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br></code></pre></td></tr></table></figure>
+                <p><a target="_blank" rel="noopener" href="https://numpy.org/devdocs/user/absolute_beginners.html">Numpy 官网</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br></code></pre></td></tr></table></figure>
 
 <h1 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1 初始化"></a>1 初始化</h1><h2 id="1-1-np-empty"><a href="#1-1-np-empty" class="headerlink" title="1.1 np.empty"></a>1.1 np.empty</h2><p><mark style="background: #FF5582A6;">意义</mark><br>    创建空的 ndarray</p>
 <p><mark style="background: #ADCCFFA6;">关键参数</mark></p>
@@ -332,64 +336,83 @@
 <li>dtype</li>
 </ul>
 <h1 id="2-操作"><a href="#2-操作" class="headerlink" title="2 操作"></a>2 操作</h1><h2 id="2-1-切片和索引"><a href="#2-1-切片和索引" class="headerlink" title="2.1 切片和索引"></a>2.1 切片和索引</h2><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127155917.png" srcset="/img/loading.gif" lazyload></p>
-<p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数"><a href="#关键参数" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<p><mark style="background: #FF5582A6;">意义</mark><br>    通过切片和索引获取部分值</p>
+<p><mark style="background: #ADCCFFA6;">关键参数</mark></p>
+<ul>
+<li>[:]</li>
+</ul>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">a = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]])<br><span class="hljs-built_in">print</span>(a)<br><span class="hljs-built_in">print</span>(a[<span class="hljs-number">0</span>])<br><span class="hljs-built_in">print</span>(a[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>])<br><span class="hljs-built_in">print</span>(a[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>:])<br></code></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">array</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])<br><span class="hljs-attribute">2</span><span class="hljs-meta"></span><br><span class="hljs-meta">[2 3]</span><br></code></pre></td></tr></table></figure>
 
 
-<h2 id="2-2-np-sort"><a href="#2-2-np-sort" class="headerlink" title="2.2 np.sort"></a>2.2 np.sort</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-1"><a href="#关键参数-1" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="2-2-np-sort"><a href="#2-2-np-sort" class="headerlink" title="2.2 np.sort"></a>2.2 np.sort</h2><p><mark style="background: #FF5582A6;">意义</mark><br>    按照升序排</p>
+<p><mark style="background: #ADCCFFA6;">关键参数</mark></p>
+<ul>
+<li>a</li>
+<li>axis</li>
+</ul>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">a = np.array([[<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>]])<br><span class="hljs-built_in">print</span>(np.sort(a))<br></code></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-string">[[0 1 2]</span><br><span class="hljs-string"> [1 6 9]]</span><br></code></pre></td></tr></table></figure>
+
+<p><mark style="background: #BBFABBA6;">示例 2</mark></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">a = np.array([[<span class="hljs-number">9</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>]])<br><span class="hljs-built_in">print</span>(np.sort(a, axis=<span class="hljs-number">0</span>))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---------&quot;</span>)<br><span class="hljs-built_in">print</span>(np.sort(a, axis=<span class="hljs-number">1</span>))<br></code></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-string">[[2 1 0]</span><br><span class="hljs-string"> [9 1 6]]</span><br> <span class="hljs-comment">---------</span><br><span class="hljs-string">[[0 1 9]</span><br><span class="hljs-string"> [1 2 6]]</span><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="2-3-np-concatenate"><a href="#2-3-np-concatenate" class="headerlink" title="2.3 np.concatenate"></a>2.3 np.concatenate</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-2"><a href="#关键参数-2" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<p><mark style="background: #ADCCFFA6;">关键参数</mark></p>
+<ul>
+<li>(a1, a2, ……)</li>
+<li>axis</li>
+</ul>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">a = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>]])<br>b = np.array([[<span class="hljs-number">5</span>, <span class="hljs-number">6</span>]])<br><span class="hljs-built_in">print</span>(np.concatenate((a, b), axis=<span class="hljs-number">0</span>))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---------&quot;</span>)<br><span class="hljs-built_in">print</span>(np.concatenate((a, b.T), axis=<span class="hljs-number">1</span>))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---------&quot;</span>)<br><span class="hljs-built_in">print</span>(np.concatenate((a, b), axis=<span class="hljs-literal">None</span>))<br></code></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs lua">array(<span class="hljs-string">[[1, 2],</span><br><span class="hljs-string">       [3, 4],</span><br><span class="hljs-string">       [5, 6]]</span>)<br><span class="hljs-comment">---------</span><br>array(<span class="hljs-string">[[1, 2, 5],</span><br><span class="hljs-string">       [3, 4, 6]]</span>)<br><span class="hljs-comment">---------</span><br>array([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>])<br></code></pre></td></tr></table></figure>
 
 
-<h2 id="2-4-筛选"><a href="#2-4-筛选" class="headerlink" title="2.4 筛选"></a>2.4 筛选</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-3"><a href="#关键参数-3" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="2-4-筛选"><a href="#2-4-筛选" class="headerlink" title="2.4 筛选"></a>2.4 筛选</h2><p><mark style="background: #FF5582A6;">意义</mark><br>    可用于 mask</p>
+<p><mark style="background: #ADCCFFA6;">关键参数</mark></p>
+<ul>
+<li>比较符号</li>
+<li>索引 []</li>
+</ul>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="2-5-np-nonzero"><a href="#2-5-np-nonzero" class="headerlink" title="2.5 np.nonzero"></a>2.5 np.nonzero</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-4"><a href="#关键参数-4" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数"><a href="#关键参数" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="2-6-np-vstack"><a href="#2-6-np-vstack" class="headerlink" title="2.6 np.vstack"></a>2.6 np.vstack</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-5"><a href="#关键参数-5" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-1"><a href="#关键参数-1" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="2-7-np-hstack"><a href="#2-7-np-hstack" class="headerlink" title="2.7 np.hstack"></a>2.7 np.hstack</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-6"><a href="#关键参数-6" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-2"><a href="#关键参数-2" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="2-8-np-hsplit"><a href="#2-8-np-hsplit" class="headerlink" title="2.8 np.hsplit"></a>2.8 np.hsplit</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-7"><a href="#关键参数-7" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-3"><a href="#关键参数-3" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="2-9-copy"><a href="#2-9-copy" class="headerlink" title="2.9 .copy()"></a>2.9 .copy()</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-8"><a href="#关键参数-8" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-4"><a href="#关键参数-4" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
@@ -397,7 +420,7 @@
 
 <h2 id="2-10-加减乘除"><a href="#2-10-加减乘除" class="headerlink" title="2.10 加减乘除"></a>2.10 加减乘除</h2><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127160921.png" srcset="/img/loading.gif" lazyload><br><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127160935.png" srcset="/img/loading.gif" lazyload></p>
 <p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-9"><a href="#关键参数-9" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-5"><a href="#关键参数-5" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
@@ -407,35 +430,35 @@
 <p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127161343.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127161417.png" srcset="/img/loading.gif" lazyload></p>
 <p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-10"><a href="#关键参数-10" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-6"><a href="#关键参数-6" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="2-12-np-unique"><a href="#2-12-np-unique" class="headerlink" title="2.12 np.unique()"></a>2.12 np.unique()</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-11"><a href="#关键参数-11" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-7"><a href="#关键参数-7" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="2-13-np-flip"><a href="#2-13-np-flip" class="headerlink" title="2.13 np.flip()"></a>2.13 np.flip()</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-12"><a href="#关键参数-12" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-8"><a href="#关键参数-8" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h1 id="3-维度"><a href="#3-维度" class="headerlink" title="3 维度"></a>3 维度</h1><h2 id="3-1-np-newaxis"><a href="#3-1-np-newaxis" class="headerlink" title="3.1 np.newaxis()"></a>3.1 np.newaxis()</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-13"><a href="#关键参数-13" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-9"><a href="#关键参数-9" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="3-2-np-expand-dims"><a href="#3-2-np-expand-dims" class="headerlink" title="3.2 np.expand_dims()"></a>3.2 np.expand_dims()</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-14"><a href="#关键参数-14" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-10"><a href="#关键参数-10" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
@@ -443,21 +466,21 @@
 
 <h2 id="3-3-reshape-transpose-T"><a href="#3-3-reshape-transpose-T" class="headerlink" title="3.3 .reshape() .transpose() .T"></a>3.3 .reshape() .transpose() .T</h2><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127161915.png" srcset="/img/loading.gif" lazyload></p>
 <p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-15"><a href="#关键参数-15" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-11"><a href="#关键参数-11" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="3-4-flatten-ravel"><a href="#3-4-flatten-ravel" class="headerlink" title="3.4 .flatten() .ravel()"></a>3.4 .flatten() .ravel()</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-16"><a href="#关键参数-16" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-12"><a href="#关键参数-12" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="3-5-ndim-size-shape"><a href="#3-5-ndim-size-shape" class="headerlink" title="3.5 .ndim .size .shape"></a>3.5 .ndim .size .shape</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-17"><a href="#关键参数-17" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-13"><a href="#关键参数-13" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
@@ -466,25 +489,40 @@
 <h1 id="4-广播机制-Broadcasting"><a href="#4-广播机制-Broadcasting" class="headerlink" title="4 广播机制 (Broadcasting)"></a>4 广播机制 (Broadcasting)</h1><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127161102.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221127161454.png" srcset="/img/loading.gif" lazyload></p>
 <p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-18"><a href="#关键参数-18" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-14"><a href="#关键参数-14" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h1 id="5-保存和读取"><a href="#5-保存和读取" class="headerlink" title="5 保存和读取"></a>5 保存和读取</h1><h2 id="5-1-np-save-np-savez-np-load"><a href="#5-1-np-save-np-savez-np-load" class="headerlink" title="5.1 np.save() np.savez() np.load()"></a>5.1 np.save() np.savez() np.load()</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-19"><a href="#关键参数-19" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-15"><a href="#关键参数-15" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
 
 <h2 id="5-2-np-savetxt-np-loadtxt"><a href="#5-2-np-savetxt-np-loadtxt" class="headerlink" title="5.2 np.savetxt() np.loadtxt()"></a>5.2 np.savetxt() np.loadtxt()</h2><p><mark style="background: #FF5582A6;">意义</mark></p>
-<h2 id="关键参数-20"><a href="#关键参数-20" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
+<h2 id="关键参数-16"><a href="#关键参数-16" class="headerlink" title="关键参数"></a><mark style="background: #ADCCFFA6;">关键参数</mark></h2><p>- </p>
 <p><mark style="background: #BBFABBA6;">示例 1</mark></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><br></code></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
 
+
+
+<p>她最喜欢的中国成语是 xxx， 大概意思是上天会按照每个人付出相应的勤奋，给与酬劳，她相信勤奋会使得我们变得更好。</p>
+<p>My Partner favorite Chinese idiom is god rewards diligent, which means that God will reward each person according to his or her hard work, and she believes that hard work will make us better.</p>
+<p>We should trust what we see with our eyes more than what we hear with our ears</p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221128095155.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221128102730.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221128105625.png" srcset="/img/loading.gif" lazyload></p>
+<p>未雨绸缪</p>
+<p>未雨绸缪 matches number ten e</p>
+<p>金玉其外败絮其中 matches number seven b</p>
+<p>一叶障目 mathches number forteeen m</p>
+<p>We interpret xx as having adequate guidelines before doing anything, otherwise you may be caught off guard in the face of some unexpected situations.</p>
+<p>We interpret 未雨绸缪 as having  adequate guidelines before doing anything, otherwise you may be caught off guard by some unexpected situations.</p>
+<p>Planing and preparing ahead of time can prevent many avoidable</p>
 
                 
               </div>
