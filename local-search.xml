@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>内网穿透 ssh</title>
+    <link href="/2022/12/01/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%20ssh/"/>
+    <url>/2022/12/01/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%20ssh/</url>
+    
+    <content type="html"><![CDATA[<p>A：Ubuntu</p><p>B：Mac</p><p>目的：通过 Mac 进行 ssh 连接 Ubuntu</p><p>确认系统架构</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">arch</span><br></code></pre></td></tr></table></figure><figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs llvm"><span class="hljs-keyword">x</span><span class="hljs-number">86</span>_<span class="hljs-number">64</span><br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">dpkg --print-architecture<br></code></pre></td></tr></table></figure><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">amd64<br></code></pre></td></tr></table></figure><p>下载 <a href="https://hsk.oray.com/download/">Linux amd64 花生壳</a></p><p>安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo dpkg -i phddns_5_1_amd64.deb<br></code></pre></td></tr></table></figure><p>安装之后，系统会显示<mark style="background: #FF5582A6;">账号</mark> “SN”，相当于本机客户端账号，初始密码是admin：</p><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235043.png"></p><ul><li><p>启动</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo phddns start<br></code></pre></td></tr></table></figure></li><li><p>停止</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo phddns stop<br></code></pre></td></tr></table></figure></li><li><p>查看状态，会显示 SN，ONLINE 表示启动为在线状态</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo phddns status<br></code></pre></td></tr></table></figure></li></ul><p>进入花生壳管理平台 —-&gt; <mark style="background: #FF5582A6;">设备列表</mark> —-&gt; 添加设备 —-&gt; 输入 SN 码，即上面的那个</p><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235314.png"></p><p>添加设备成功后，点击<mark style="background: #FF5582A6;">内网穿透</mark>，按照下图配置</p><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235530.png"></p><p>配置后点击确定，点击下图的左下角的<mark style="background: #FF5582A6;">诊断</mark></p><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235751.png"></p><p>上图访问地址在 : 后面的最后五个数字为端口号，不妨设为 <strong>12345</strong></p><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221202000030.png"><br>上图的域名 IP 设为 <strong>103.46.x.x</strong></p><p>ssh 连接</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh 用户名@103.46.x.x -p 12345<br></code></pre></td></tr></table></figure><p>其中用户名就是 Ubuntu 终端最前的名字</p><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221202000853.png"></p><h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a href="https://blog.csdn.net/yilongyoung/article/details/119845679">https://blog.csdn.net/yilongyoung/article/details/119845679</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>tools</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>内网穿透</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Git_04_远程仓库</title>
     <link href="/2022/11/29/Git_04_%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/"/>
     <url>/2022/11/29/Git_04_%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>

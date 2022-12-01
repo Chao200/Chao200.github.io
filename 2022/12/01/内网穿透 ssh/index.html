@@ -16,28 +16,29 @@
   <meta name="author" content="Chao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="https 和 ssh">
+    <meta name="description" content="内网穿透 ssh 连接不同网络服务器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git_04_远程仓库">
-<meta property="og:url" content="http://example.com/2022/11/29/Git_04_%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/index.html">
+<meta property="og:title" content="内网穿透 ssh">
+<meta property="og:url" content="http://example.com/2022/12/01/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%20ssh/index.html">
 <meta property="og:site_name" content="Chao">
-<meta property="og:description" content="https 和 ssh">
+<meta property="og:description" content="内网穿透 ssh 连接不同网络服务器">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120355.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120751.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120843.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120912.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124121148.png">
-<meta property="article:published_time" content="2022-11-29T12:14:30.315Z">
-<meta property="article:modified_time" content="2022-11-29T12:15:04.072Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235043.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235314.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235530.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235751.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221202000030.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221202000853.png">
+<meta property="article:published_time" content="2022-12-01T09:04:45.049Z">
+<meta property="article:modified_time" content="2022-12-01T16:13:50.563Z">
 <meta property="article:author" content="Chao">
-<meta property="article:tag" content="git">
+<meta property="article:tag" content="内网穿透">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120355.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235043.png">
   
   
   
-  <title>Git_04_远程仓库 - Chao</title>
+  <title>内网穿透 ssh - Chao</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +191,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Git_04_远程仓库"></span>
+            <span id="subtitle" data-typed-text="内网穿透 ssh"></span>
           
         </div>
 
@@ -206,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-29 20:14" pubdate>
-          November 29, 2022 pm
+        <time datetime="2022-12-01 17:04" pubdate>
+          December 1, 2022 pm
         </time>
       </span>
     
@@ -218,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          841 words
+          507 words
         
       </span>
     
@@ -229,7 +230,7 @@
         
         
         
-          8 mins
+          5 mins
         
       </span>
     
@@ -267,67 +268,52 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Git_04_远程仓库</h1>
+            <h1 style="display: none">内网穿透 ssh</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="1-配置"><a href="#1-配置" class="headerlink" title="1 配置"></a>1 配置</h1><ul>
-<li><p>用户名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;chao&quot;</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>邮箱</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.email <span class="hljs-string">&quot;xiaochao200@126.com&quot;</span><br></code></pre></td></tr></table></figure></li>
-</ul>
-<blockquote>
-<p>可以随便填，主要记录你的信息</p>
-</blockquote>
-<h1 id="2-https"><a href="#2-https" class="headerlink" title="2 https"></a>2 https</h1><p>其中 origin 可以取别的名字</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin https://github.com/用户名/仓库名.git<br></code></pre></td></tr></table></figure>
+                <p>A：Ubuntu</p>
+<p>B：Mac</p>
+<p>目的：通过 Mac 进行 ssh 连接 Ubuntu</p>
+<p>确认系统架构</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">arch</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs llvm"><span class="hljs-keyword">x</span><span class="hljs-number">86</span>_<span class="hljs-number">64</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">dpkg --print-architecture<br></code></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">amd64<br></code></pre></td></tr></table></figure>
 
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push origin 本地分支[:远程分支]<br></code></pre></td></tr></table></figure>
+<p>下载 <a target="_blank" rel="noopener" href="https://hsk.oray.com/download/">Linux amd64 花生壳</a></p>
+<p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo dpkg -i phddns_5_1_amd64.deb<br></code></pre></td></tr></table></figure>
 
-<p>更具体</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push origin main:main<br></code></pre></td></tr></table></figure>
-
-<p>当远程分支与本地分支同名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push -u origin main<br></code></pre></td></tr></table></figure>
-
-<p>第一次 push 加上 -u</p>
-<p>需要输入用户名和密码，但是这里的密码 2021 年更改为了 tokens，tokens 的创建可以看 [[#^565e40|3.3 tokens]]</p>
-<h1 id="3-ssh"><a href="#3-ssh" class="headerlink" title="3 ssh"></a>3 ssh</h1><h2 id="3-1-ssh"><a href="#3-1-ssh" class="headerlink" title="3.1 ssh"></a>3.1 ssh</h2><ul>
-<li>生成本地 ssh</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120355.png" srcset="/img/loading.gif" lazyload></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd ~<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd .ssh<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cat id_rsa.pub<br></code></pre></td></tr></table></figure>
-
-<p>上面代码执行后输出的就是 ssh 秘钥，复制</p>
-<p>如果没有 <mark style="background: #FF5582A6;">id_rsa.pub</mark></p>
+<p>安装之后，系统会显示<mark style="background: #FF5582A6;">账号</mark> “SN”，相当于本机客户端账号，初始密码是admin：</p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235043.png" srcset="/img/loading.gif" lazyload></p>
 <ul>
-<li>创建 ssh 秘钥<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ssh-keygen -t rsa -C &quot;xiaochao200@126.com&quot;<br></code></pre></td></tr></table></figure></li>
+<li><p>启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo phddns start<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>停止</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo phddns stop<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>查看状态，会显示 SN，ONLINE 表示启动为在线状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo phddns status<br></code></pre></td></tr></table></figure></li>
 </ul>
-<p>生成后，执行上面步骤，最后复制</p>
-<h2 id="3-2-github"><a href="#3-2-github" class="headerlink" title="3.2 github"></a>3.2 github</h2><p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120751.png" srcset="/img/loading.gif" lazyload alt="150"></p>
-<p>在 github 账户的 settings 中找到下面的 SSH and GPG keys</p>
-<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120843.png" srcset="/img/loading.gif" lazyload alt="200"></p>
-<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124120912.png" srcset="/img/loading.gif" lazyload></p>
-<p>点击 new ssh key，然后将之前复制的本地 ssh 秘钥粘贴保存即可</p>
-<p>再创建一个仓库 resp</p>
-<h2 id="3-3-tokens"><a href="#3-3-tokens" class="headerlink" title="3.3 tokens"></a>3.3 tokens</h2><p>^565e40</p>
-<p>在 github 用户 settings 的 develpoer settings 中创建 tokens</p>
-<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221124121148.png" srcset="/img/loading.gif" lazyload alt="300"></p>
-<h2 id="3-4-建立远程"><a href="#3-4-建立远程" class="headerlink" title="3.4 建立远程"></a>3.4 建立远程</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git remote add origin git@github.com:用户名/仓库名.git<br></code></pre></td></tr></table></figure>
+<p>进入花生壳管理平台 —-&gt; <mark style="background: #FF5582A6;">设备列表</mark> —-&gt; 添加设备 —-&gt; 输入 SN 码，即上面的那个</p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235314.png" srcset="/img/loading.gif" lazyload></p>
+<p>添加设备成功后，点击<mark style="background: #FF5582A6;">内网穿透</mark>，按照下图配置</p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235530.png" srcset="/img/loading.gif" lazyload></p>
+<p>配置后点击确定，点击下图的左下角的<mark style="background: #FF5582A6;">诊断</mark></p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221201235751.png" srcset="/img/loading.gif" lazyload></p>
+<p>上图访问地址在 : 后面的最后五个数字为端口号，不妨设为 <strong>12345</strong></p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221202000030.png" srcset="/img/loading.gif" lazyload><br>上图的域名 IP 设为 <strong>103.46.x.x</strong></p>
+<p>ssh 连接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh 用户名@103.46.x.x -p 12345<br></code></pre></td></tr></table></figure>
 
-<p>其中的 origin 也可以换成别的名字</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git remote set-url origin https://你的tokens@github.com/用户名/仓库名.git<br></code></pre></td></tr></table></figure>
-
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">第一次 push</span><br>git push -u origin main<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">以后 push</span><br>git push origin main<br></code></pre></td></tr></table></figure>
+<p>其中用户名就是 Ubuntu 终端最前的名字</p>
+<p><img src="https://raw.githubusercontent.com/Chao200/Obsidian/main/%E8%AE%BA%E6%96%87/20221202000853.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/yilongyoung/article/details/119845679">https://blog.csdn.net/yilongyoung/article/details/119845679</a></p>
 
                 
               </div>
@@ -361,7 +347,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/git/">#git</a>
+        <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">#内网穿透</a>
       
     </div>
   
@@ -374,8 +360,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Git_04_远程仓库</div>
-      <div>http://example.com/2022/11/29/Git_04_远程仓库/</div>
+      <div>内网穿透 ssh</div>
+      <div>http://example.com/2022/12/01/内网穿透 ssh/</div>
     </div>
     <div class="license-meta">
       
@@ -387,7 +373,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>November 29, 2022</div>
+          <div>December 1, 2022</div>
         </div>
       
       
@@ -420,18 +406,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/12/01/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%20ssh/" title="内网穿透 ssh">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">内网穿透 ssh</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/11/29/Git_03_%E5%88%86%E6%94%AF/" title="Git_03_分支">
-                        <span class="hidden-mobile">Git_03_分支</span>
+                      <a href="/2022/11/29/Git_04_%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" title="Git_04_远程仓库">
+                        <span class="hidden-mobile">Git_04_远程仓库</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
